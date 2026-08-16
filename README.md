@@ -5,44 +5,9 @@ This project demonstrates how to host a static website on **Amazon S3**, distrib
 The project also uses **Amazon Route 53** for DNS routing and **AWS Certificate Manager (ACM)** for HTTPS/SSL.
 
 ## Architecture
+<img width="1817" height="743" alt="Screenshot 2026-08-16 131913" src="https://github.com/user-attachments/assets/5ba3d2c6-f6bb-44fc-ba80-70874ef9d1c4" />
 
-```text
-                 ┌─────────────────┐
-                 │     GitHub      │
-                 │   Source Code   │
-                 └────────┬────────┘
-                          │
-                          │ Webhook
-                          ▼
-                 ┌─────────────────┐
-                 │  AWS CodeBuild  │
-                 │     Build       │
-                 └────────┬────────┘
-                          │
-                          ▼
-                 ┌─────────────────┐
-                 │  AWS CodePipeline│
-                 │   Deployment    │
-                 └────────┬────────┘
-                          │
-                          ▼
-                 ┌─────────────────┐
-                 │   Amazon S3     │
-                 │ Static Website  │
-                 └────────┬────────┘
-                          │
-                          ▼
-                 ┌─────────────────┐
-                 │ Amazon CloudFront│
-                 │  CDN + HTTPS    │
-                 └────────┬────────┘
-                          │
-                          ▼
-                 ┌─────────────────┐
-                 │   Route 53 DNS  │
-                 │  Custom Domain  │
-                 └─────────────────┘
-```
+
 
 ## AWS Services Used
 
